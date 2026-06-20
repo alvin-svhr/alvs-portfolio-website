@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio and achievements of Your Name." />
+
+  <!-- SVG favicon (a small gradient mark) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Animated background -->
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand" data-route="portfolio">
+        <span class="brand-mark" id="brandMark">YN</span>
+        <span class="brand-name" id="brandName">Your Name</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#home"     class="nav-link" data-route="portfolio">Home</a>
+        <a href="#about"    class="nav-link" data-route="portfolio">About</a>
+        <a href="#work"     class="nav-link" data-route="portfolio">Work</a>
+        <a href="#skills"   class="nav-link" data-route="portfolio">Skills</a>
+        <a href="#docs"     class="nav-link nav-link--accent" data-route="docs">Documentation</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark mode" title="Toggle theme"></button>
+        <a href="#contact" class="btn btn-ghost btn-sm" data-route="portfolio" id="navCta">Contact</a>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== PORTFOLIO VIEW ===================== -->
+  <main id="view-portfolio" class="view view--active">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-spotlight" id="heroSpotlight" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <span class="eyebrow"><span class="dot" id="availDot"></span><span id="availText">Available for work</span></span>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text" id="heroName">Your Name</span>.<br />
+            I'm a <span class="rotator" id="rotator" aria-live="polite"></span>
+          </h1>
+          <p class="hero-tagline" id="heroTagline"></p>
+          <div class="hero-cta">
+            <a href="#work" class="btn btn-primary" data-route="portfolio">View my work <span class="btn-arrow">→</span></a>
+            <a href="#docs" class="btn btn-ghost" data-route="docs">See my wins</a>
+          </div>
+          <div class="hero-socials" id="heroSocials"></div>
+        </div>
+
+        <div class="hero-photo reveal">
+          <div class="photo-frame">
+            <div class="photo-glow" aria-hidden="true"></div>
+            <img id="profileImg" alt="" />
+            <div class="photo-fallback" id="photoFallback">YN</div>
+          </div>
+          <div class="photo-badge" id="photoBadge"></div>
+        </div>
+      </div>
+
+      <div class="hero-stats container" id="heroStats"></div>
+      <a href="#about" class="scroll-hint" data-route="portfolio" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">01 — Profile</span>
+          <h2 class="section-title" id="aboutHeading">About Me</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal" id="aboutText"></div>
+          <div class="about-facts reveal" id="aboutFacts"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">02 — Selected Work</span>
+          <h2 class="section-title">Projects I'm proud of</h2>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">03 — Toolkit</span>
+          <h2 class="section-title">Skills & strengths</h2>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="journey">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">04 — Journey</span>
+          <h2 class="section-title">The road so far</h2>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <h2 class="contact-title gradient-text" id="contactHeading">Let's build something</h2>
+          <p class="contact-text" id="contactText"></p>
+          <a href="#" class="btn btn-primary btn-lg" id="contactBtn">Say hello</a>
+          <div class="contact-socials" id="contactSocials"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== DOCUMENTATION VIEW ===================== -->
+  <main id="view-docs" class="view">
+    <section class="section docs-hero">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Portfolio Documentation</span>
+          <h2 class="section-title">The trophy shelf <span class="gradient-text">— everything I've earned.</span></h2>
+          <p class="docs-sub reveal">Competitions, games, cooking, milestones — the proof behind the profile.</p>
+        </div>
+
+        <div class="docs-filters" id="docsFilters" role="tablist" aria-label="Filter achievements"></div>
+        <div class="docs-grid" id="docsGrid"></div>
+        <p class="docs-empty" id="docsEmpty" hidden>Nothing here yet — add achievements in <code>data.js</code>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-brand" id="footerName">Your Name</span>
+      <span class="footer-note" id="footerNote"></span>
+      <button class="to-top" id="toTop" aria-label="Back to top">↑ Top</button>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
