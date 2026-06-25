@@ -14,11 +14,11 @@ window.PORTFOLIO_DATA = {
   /* ---------------------------------------------------------------------
      1. BASIC INFO  — who you are
      --------------------------------------------------------------------- */
-  name: "Your Name",
-  initials: "YN",                       // fallback shown if no photo is set
-  role: "Creative Developer & Builder",
-  location: "Your City, Country",
-  email: "you@example.com",
+  name: "Alviadi Fauzan",
+  initials: "AF",                       // fallback shown if no photo is set
+  role: "Student",
+  location: "Jakarta, Indonesia",
+  email: "your.name@gmail.com",
   available: true,                      // shows the green "available" dot
 
   // Your cover photo. Put your image in the "assets" folder and write its
@@ -29,10 +29,10 @@ window.PORTFOLIO_DATA = {
   resumeUrl: "",
 
   // Words that rotate in the hero headline. Add or remove freely.
-  rotatingWords: ["Developer", "Designer", "Chess Player", "Problem Solver"],
+  rotatingWords: ["Student", "Chemical & Energy Researcher", "Debater", "MUN Delagate"],
 
   // One or two punchy sentences under your name.
-  tagline: "I turn ideas into clean, interactive experiences — and I collect a few interesting wins along the way.",
+  tagline: "Research is to see what everybody else has seen, and to think what nobody else has thought." 
 
 
   /* ---------------------------------------------------------------------
@@ -70,10 +70,10 @@ window.PORTFOLIO_DATA = {
     ],
     // Small fact chips shown beside the about text.
     facts: [
-      { label: "Based in",   value: "Your City" },
-      { label: "Focus",      value: "Web & Design" },
-      { label: "Currently",  value: "Open to work" },
-      { label: "Fun fact",   value: "I cook a mean ramen" }
+      { label: "Based in",   value: "Jakarta" },
+      { label: "Focus",      value: "Research, Public Speaking, & Physics" },
+      { label: "Currently",  value: "On the Grind" },
+      { label: "Goal",   value: "To Never Become Average" }
     ]
   },
 
@@ -248,11 +248,11 @@ window.PORTFOLIO_DATA = {
      9. CONTACT  — the closing call-to-action
      --------------------------------------------------------------------- */
   contact: {
-    heading: "Let's build something",
-    text: "Got a project, an idea, or just want to say hi? My inbox is always open.",
+    heading: "Let's network a bit",
+    text: "Got an idea, or just wanna say hi? My inbox is always open",
     buttonLabel: "Say hello"
   },
 
   // Shown in the footer. The year updates automatically.
-  footerNote: "Designed & built with care."
+  footerNote: "Never be satisfied with mediocrity"
 };
